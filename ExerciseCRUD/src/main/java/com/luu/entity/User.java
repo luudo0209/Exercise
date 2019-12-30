@@ -11,14 +11,14 @@ import javax.persistence.Table;
 @Table
 public class User {
 	
-   @Id  
-   @GeneratedValue(strategy = GenerationType.AUTO)  
-   private Long userId;  
+	@Id  
+   	@GeneratedValue(strategy = GenerationType.AUTO)  
+   	private Long userId;  
 
-   @Column  
-   private String userName;  
+   	@Column(unique = true)
+   	private String userName;  
 
-	@Column
+	@Column(name = "email", unique = true)
 	private String email;  
 	
 	@Column  
